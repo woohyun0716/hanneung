@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@theme inline {
+  --color-ink: var(--fg);
+  --color-white: var(--card);
+  --color-mist: var(--bg);
+  --color-celadon: var(--accent);
+  --color-celadon-soft: var(--accent-soft);
+  --color-seal: var(--alert);
+  --color-seal-soft: var(--alert-soft);
+  --font-sans: "Noto Sans KR", "Noto Sans CJK KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-serif: "Noto Serif KR", "Noto Serif CJK KR", "Apple SD Gothic Neo", "Malgun Gothic", serif;
+  --animate-fade-in: fade-in 0.25s ease-out;
+  @keyframes fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}
+@layer components {
+  .btn { @apply inline-flex min-h-12 items-center rounded-lg bg-celadon px-6 font-medium text-white transition-all hover:bg-celadon/90 active:scale-[0.98]; }
+}
+button:not(:disabled), [role="button"], summary, label[for] { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+main:focus, section[tabindex="-1"]:focus { outline: none; }
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { transition: none !important; animation: none !important; } }

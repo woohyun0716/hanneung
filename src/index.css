@@ -1,0 +1,5 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply bg-mist text-ink font-sans antialiased; }
+:focus-visible { outline: 3px solid #3f7d73; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+@layer components { .btn { @apply inline-flex min-h-12 items-center rounded-lg bg-celadon px-6 font-medium text-white transition-all hover:bg-celadon/90 active:scale-[0.98]; } }

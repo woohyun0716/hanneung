@@ -1,0 +1,11 @@
+/* 레이아웃: 데스크톱은 왼쪽 사이드바 + 본문, 모바일은 하단 탭. 한국사 학습용이라 먹색 글씨와 청자색 포인트를 쓴다. */
+:root {
+  --bg: #f3f6f5; --card: #ffffff; --fg: #17232b;
+  --accent: #2f6a60; --accent-soft: #e3efec;
+  --alert: #b4412f; --alert-soft: #f8e6e2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0f1a1e; --card: #172429; --fg: #e6eef0; --accent: #6cc2b1; --accent-soft: #1d3834; --alert: #f09a8a; --alert-soft: #3a2420; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #0f1a1e; --card: #172429; --fg: #e6eef0; --accent: #6cc2b1; --accent-soft: #1d3834; --alert: #f09a8a; --alert-soft: #3a2420; color-scheme: dark; }
+body { background: var(--bg); color: var(--fg); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
